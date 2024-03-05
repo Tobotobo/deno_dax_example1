@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Deno Compile",
+      "type": "shell",
+      "command": "deno compile --allow-all ${file} && echo Success!",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "clear": true,
+        "echo": true,
+        "showReuseMessage": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
