@@ -86,7 +86,7 @@ Deno 1.41 で deno compile で生成される exe
   }
   ```
   ※`"console": "externalTerminal"` にしないと echo が出力されず...
-  他の対処法があれば教えてくだい。
+  他の対処法があれば教えてください。
 
 ## Hello, World!
 
@@ -117,9 +117,23 @@ Debugger session ended
 ### コンソールで手動実行の場合
 
 ```
-> deno.exe run --allow-all ./hello.ts   
+> deno run --allow-all ./hello.ts
 Hello, World!
 ```
 
 ※[dax](https://github.com/dsherret/dax) の README
 に色々な使用例が記載されているので、他の使い方はそちらを参照
+
+## コンパイル
+
+[deno compile, standalone executables](https://docs.deno.com/runtime/manual/tools/compiler)\
+[Deno 1.41: smaller deno compile binaries](https://deno.com/blog/v1.41)
+
+```
+> deno compile --allow-all ./hello.ts
+> ./hello.exe
+Hello, World!
+```
+
+※hello.exe のサイズは 72 MB\
+※公式の Hello world は 58 MB なので dax の分少し大きいか？
